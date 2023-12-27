@@ -1,4 +1,14 @@
+first line in local
+second line in local
+third line in remote
+forth line in remote
 <<<<<<< HEAD
+fifth line in local
+sixth line in local
+=======
+eigth line in remote 
+ninth line in remote
+>>>>>>> 9597280d467db9840c5581e80dba71fbae44c979
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +20,4 @@
     <h1>fist html code</h1>
 </body>
 </html>
-=======
-html file
->>>>>>> 55dce09dcf66d126ea61691cee1ccbdceb958d3b
+hello
