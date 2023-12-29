@@ -12,7 +12,7 @@ COPY src ./src
 RUN mvn clean package
 
 # Create a new image with a minimal runtime environment
-FROM adoptopenjdk:17-jre-hotspot
+FROM adoptopenjdk/openjdk17:alpine-jre AS runtime
 
 # Set the working directory to /app
 WORKDIR /app
