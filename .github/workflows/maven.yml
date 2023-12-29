@@ -35,3 +35,15 @@ jobs:
       with:
         name: my-java-artifact
         path: target/
+     
+
+    - name: Build and Push Docker Image
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        file: Dockerfile  # Make sure you have a Dockerfile in the root of your project
+        push: true
+        tags: ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:latest
+      env:
+        DOCKER_BUILDKIT: 1
+        CONTAINER_REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
