@@ -18,7 +18,7 @@ FROM adoptopenjdk:17-jre-hotspot
 WORKDIR /app
 
 # Copy the JAR file from the build image
-COPY --from=build /app/target/your-app-name.jar ./app.jar
+COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar ./app.jar
 
 # Expose the port on which your application runs
 EXPOSE 8080
