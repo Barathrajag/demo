@@ -46,7 +46,7 @@ jobs:
        context: .
        file: Dockerfile
        push: true
-       tags: ghcr.io/barathraj/demo/latest
+       tags: ghcr.io/barathrajag/demo/latest
       env:
         DOCKER_BUILDKIT: 1
         CONTAINER_REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
