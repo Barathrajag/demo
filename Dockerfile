@@ -1,18 +1,5 @@
-# Use the official Maven image as a base image
-FROM maven:3.8.4-openjdk-17 AS build
-
-# Set the working directory to /app
-WORKDIR /app
-
-# Copy the pom.xml and source code
-COPY pom.xml .
-COPY src ./src
-
-# Build the application
-RUN mvn clean package
-
 # Create a new image with a minimal runtime environment
-FROM adoptopenjdk/openjdk17:alpine-jre AS runtime
+FROM openjdk:17-jre-alpine AS runtime
 
 # Set the working directory to /app
 WORKDIR /app
