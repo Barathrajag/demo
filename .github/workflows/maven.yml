@@ -38,9 +38,8 @@ jobs:
      
 
     - name: Set repository name in lowercase
-      run: echo "REPOSITORY_NAME=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
-DOCKER_TAG="ghcr.io/${REPOSITORY_NAME}/demo:latest"
-
+      run: echo "REPOSITORY_NAME=$(echo ${{ Barathrajag }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENVDOCKER_TAG="ghcr.io/${ Barathrajag }/demo:latest"
+      
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v2
       with:
