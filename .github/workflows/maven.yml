@@ -38,7 +38,7 @@ jobs:
      
 
     - name: Set repository name in lowercase
-      run: echo "REPOSITORY_NAME=$(echo ${{ Barathrajag }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENVDOCKER_TAG="ghcr.io/${ Barathrajag }/demo:latest"
+      run: git remote set-url origin "$(git remote get-url origin | sed -e 's/\(https:\/\/\|git@\)github.com:/\1github.com\//' -e 's/\.git$//' | tr '[:upper:]' '[:lower:]')"
       
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v2
